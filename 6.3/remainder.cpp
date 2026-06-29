@@ -1,7 +1,8 @@
 #include <iostream>
+#include "../html-like.h"
 
 int main()
 {
-
-return 0;
+  p("Hello world!");
+  return 0;
 }

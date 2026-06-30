@@ -1,0 +1,8 @@
+# ninja log v7
+2	3065	1792453955558974352	CMakeFiles/app.dir/html-like.cpp.o	249ce2f550a56549
+1	3067	1792453955554974348	CMakeFiles/app.dir/6.3/remainder.cpp.o	d45bf2b6bd3672fe
+3067	3521	1792453958622974631	app	8c5a685baf7e96dc
+3521	3535	1792453959074974131	CMakeFiles/run	4bb6f8957b9f1aba
+3521	3535	1792453959074974131	/home/brian/prg/learncpp/6.3/build/CMakeFiles/run	4bb6f8957b9f1aba
+8	57	1792453989786895842	CMakeFiles/run	4bb6f8957b9f1aba
+8	57	1792453989786895842	/home/brian/prg/learncpp/6.3/build/CMakeFiles/run	4bb6f8957b9f1aba

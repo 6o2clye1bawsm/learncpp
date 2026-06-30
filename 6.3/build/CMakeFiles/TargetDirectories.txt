@@ -1,0 +1,4 @@
+/home/brian/prg/learncpp/6.3/build/CMakeFiles/app.dir
+/home/brian/prg/learncpp/6.3/build/CMakeFiles/run.dir
+/home/brian/prg/learncpp/6.3/build/CMakeFiles/edit_cache.dir
+/home/brian/prg/learncpp/6.3/build/CMakeFiles/rebuild_cache.dir

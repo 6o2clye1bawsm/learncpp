@@ -3,6 +3,6 @@
 
 int main()
 {
-  p("Hello world!");
-  return 0;
+p("Hello world");  
+return 0;
 }

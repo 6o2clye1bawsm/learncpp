@@ -22,18 +22,27 @@ add_link_options(
     -fsanitize=address,undefined
 )
 
+# AUTOMATE COMMON HELPERS: Automatically find all .cpp files in common/src/
+file(GLOB COMMON_SOURCES "common/src/*.cpp")
+
+# Create a static library out of whatever files were found
+add_library(common STATIC ${COMMON_SOURCES})
+
+# Tell CMake where other files can find common's headers
+target_include_directories(common PUBLIC common/include)
+
 # Ensure SRC is provided
 if(NOT DEFINED SRC OR SRC STREQUAL "")
-    message(FATAL_ERROR "No source file found.")
+    message(FATAL_ERROR "Use -DSRC=path/to/file.cpp $(pwd) for source files.")
 endif()
 
 # Build using the absolute path of the passed SRC and the shared html-like.cpp upstairs
-add_executable(app 
-    ${SRC}
-    ${CMAKE_CURRENT_SOURCE_DIR}/includes/html-like.cpp
-)
+add_executable(app ${SRC})
 
-# Add a 'run' target to automatically execute the binary after building
+# Link your automated common library (brings in all current and future helpers automatically)
+target_link_libraries(app PRIVATE common)
+
+# Add a run target
 add_custom_target(run
     COMMAND $<TARGET_FILE:app>
     DEPENDS app

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../includes/html-like.h"
+#include "html-like.h"
 
 int main()
 {

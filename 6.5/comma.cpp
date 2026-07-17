@@ -2,7 +2,7 @@
 #include <string_view>
 using namespace std;
 
-void P(string_view str) {
+constexpr void P(string_view str) {
   cout << str << '\n';
 }
 
@@ -30,6 +30,9 @@ int main() {
   P("setting z = y because that's the one on the right.");
   int z{};
   cout << "x = " << x << ", y = " << y << ", so if we do (z = x, y), z = " << (z = x, y) << '\n';
+  BR();
+  P("overall you should just use the comma in for loops");
+  P("or as a separator, like function arguments");
   return 0;
 }
  

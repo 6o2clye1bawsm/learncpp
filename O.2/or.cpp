@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string_view>
+#include <bitset>
+using namespace std;
+
+void P(string_view str) {
+  cout << str << '\n';
+}
+
+void BR() {
+  cout << '\n';
+}
+
+int main () {
+  P("or|");
+  P("returns true if any bit is true");
+  bitset<4> x{0b0110};
+  bitset<4> y{0b0010};
+  cout << "x = " << x << '\n';
+  cout << "y = " << y << '\n';
+  cout << "x|y = " << (x|y) << '\n';
+  return 0;
+}

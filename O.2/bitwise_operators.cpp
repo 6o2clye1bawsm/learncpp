@@ -31,6 +31,18 @@ int main() {
   P("also if the type that youre operating on is");
   P("smaller than an int, then using any of the");
   P("operators will automatically upgrade it to");
-  P("the size of an int");
+  P("the size of an int, so it'll first promote");
+  P("it to that size then it'll perform the oper");
+  BR();
+  P("if you want it to perform the oper on the");
+  P("smaller size, just do the regular operation");
+  P("then do a static_cast to whatever size like");
+  P("uint8_t, thatll truncate it.");
+  BR();
+  BR();
+  P("summary:");
+  P("OR: if any is one, the answer is 1");
+  P("AND: if all are one, the answer is 1");
+  P("XOR: if there are an odd # on, the answer is 1");
   return 0;
 }

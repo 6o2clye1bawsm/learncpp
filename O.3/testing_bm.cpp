@@ -32,13 +32,21 @@ int main() {
   
   cout << boolalpha;
   cout << "our flags are: " << format("{:b}", flags) << '\n';
-  cout << "is the first (0th) bool on: " << (flags & mask0) << '\n';
-  cout << "is the second (1st) bool on: " << (flags & mask1) << '\n';
+  cout << "is the first (0th) bool on: " << static_cast<bool>(flags & mask0) << '\n';
+  cout << "is the second (1st) bool on: " << static_cast<bool>(flags & mask1) << '\n';
   BR();
 
   P("if the & matches with something then it'll");
   P("give make the return value not-0 and any");
   P("return value other than 0 is true when");
   P("converting to bool");
+  BR();
+
+  P("you can also check multiple at once by doing");
+  P("more comparisons, separating them with");
+  P("parenthesis then linking them together with");
+  P("LOGICAL AND&& not bitwise and& operators");
+  cout << "our flags are: " << format("{:b}", flags) << '\n';
+  cout << "is the 0th and 2nd flag on: " << ((flags & mask0) && (flags & mask2)) << '\n';
   return 0;
 }

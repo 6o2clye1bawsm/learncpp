@@ -29,6 +29,25 @@ int main() {
   P("testing bits with bit masks:");
   P("since we now have our bit masks, we can use");
   P("the and& operator to see if there's a match");
+  P("flags & mask#");
+  
+  BR();
+  P("notice that the ones that have side effects");
+  P("use the assignment operators");
+  BR();
 
+  P("setting bits with bit masks:");
+  P("to set a bit, you use the or|= assignment");
+  P("operator with a mask");
+  P("flags |= mask#");
+  BR();
+
+  P("resetting bits with bit masks:");
+  P("this is similar to setting bits, but relies");
+  P("on the fact that every bit has to be on for");
+  P("and& to return true. set the mask off with");
+  P("the not~ operator and assign with the and&=");
+  P("operator");
+  P("flags &= ~mask#");
   return 0;
 }

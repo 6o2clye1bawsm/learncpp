@@ -49,5 +49,6 @@ int main() {
   P("the not~ operator and assign with the and&=");
   P("operator");
   P("flags &= ~mask#");
+  BR();
   return 0;
 }

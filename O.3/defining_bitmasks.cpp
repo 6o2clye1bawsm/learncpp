@@ -30,5 +30,28 @@ int main() {
   P("you can use:");
   P("1. hexadecimal0x literals (0x01, 0x02, 0x04...)");
   P("2. left shifting a 1 (1<<1, 1<<2, 1<<3...)");
+  BR();
+
+  P("when you are defining your bitmasks you can");
+  P("make them more useful by labelling each mask");
+  P("so that their purpose is visible in the code");
+
+	[[maybe_unused]] constexpr uint8_t isHappy   {1   }; // 0
+	[[maybe_unused]] constexpr uint8_t isHungry  {1<<1}; // 1
+	[[maybe_unused]] constexpr uint8_t isMad     {1<<2}; // 2
+	[[maybe_unused]] constexpr uint8_t isSad     {1<<3}; // 3
+	[[maybe_unused]] constexpr uint8_t isLaughing{1<<4}; // 4
+	[[maybe_unused]] constexpr uint8_t isAsleep  {1<<5}; // 5
+	[[maybe_unused]] constexpr uint8_t isDead    {1<<6}; // 6
+	[[maybe_unused]] constexpr uint8_t isCrying  {1<<7}; // 7
+  uint8_t me{};
+  me |= (isHappy | isLaughing);
+  me &= ~(isHappy | isLaughing);
+  me |= (isSad | isCrying);
+
+  cout << boolalpha;
+  cout << "Me is happy: " << static_cast<bool>(me & isHappy) << '\n';
+  cout << "Me is sad: " << static_cast<bool>(me & isSad) << '\n';
+  //you can do the same with bitmasks, instead of casting to bool do .any() to know if any val is there
   return 0;
 }

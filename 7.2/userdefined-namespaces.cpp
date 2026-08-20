@@ -29,5 +29,16 @@ int main() {
   P("you should try to start namespaces with");
   P("capital letters, but its fine if not.");
   Hl::HR();
+  P("you can access namespaces with the scope");
+  P("resolution operator");
+  Hl::HR();
+  P("you can access nested namespaces with");
+  P("multiple scope resolution operators like");
+  P("1::2::x");
+  Hl::HR();
+  P("you can add functionality to namespaces");
+  P("in multiple files to one namespace");
+  P("(like forward declarations in a header");
+  Hl::HR();
   return 0;
 }

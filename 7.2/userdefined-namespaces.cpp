@@ -13,6 +13,12 @@ namespace Hl { // html-like
   // didnt add p because i dont want to type Hl every time
 }
 
+namespace Test {
+  void Hi() {
+    cout << "Hi\n";
+  }
+}
+
 int main() {
   P("because every identifier can collide with");
   P("every other identifier, a linear increase");
@@ -33,8 +39,12 @@ int main() {
   P("resolution operator");
   Hl::HR();
   P("you can access nested namespaces with");
-  P("multiple scope resolution operators like");
+  P("multiple scope resolution operators like:");
   P("1::2::x");
+  P("aliases (written in the scope you want) like:");
+  P("namespace Alias = 1::2;");
+  P("the 'using' keywrd also in the scope u want:");
+  P("using namespace 1::2;");
   Hl::HR();
   P("you can add functionality to namespaces");
   P("in multiple files to one namespace");

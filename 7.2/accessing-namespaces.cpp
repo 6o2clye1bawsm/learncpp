@@ -36,5 +36,21 @@ int main() {
   P("that namespace's scope so running HR() actually");
   P("runs Hl::HR(). if you want to access the regular");
   P("HR(), you can run ::HR()");
+  Hl::HR();
+  Hl::HR();
+  P("you can also access namespaces through aliases,");
+  P("which are very helpful because it shortens their");
+  P("names.");
+  P("in the scope you want: namespace Alias = 1::2;");
+  P("they are also helpful because if the name of the");
+  P("namespace changes, you only need to change the");
+  P("alias definition, not every line of code that");
+  P("uses the namespace.");
+  Hl::HR();
+  Hl::HR();
+  P("you can also use the 'using namespace' with the");
+  P("name of a namespace to automatically have that");
+  P("namespace's scope added to the current scope");
+  P("(i think that's what it does)");
   return 0;
 }
